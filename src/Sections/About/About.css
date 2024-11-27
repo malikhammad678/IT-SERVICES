@@ -1,0 +1,116 @@
+
+.about {
+    min-height: 70vh;
+    position: relative;
+    padding: 130px 4rem 30px 4rem;
+    z-index: 1;
+}
+
+.about .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0; 
+    pointer-events: none;
+    height: 100vh;
+}
+.about h3 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 450;
+    width: fit-content;
+    margin: 0 auto;
+    color: rgba(1, 31, 87);
+    letter-spacing: 2px;
+    padding-bottom: .5rem;
+    padding-inline: 1rem;
+    border-bottom: 2px solid rgba(1, 31, 87);
+}
+
+.about .subtitle {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--p-color);
+    padding-top: 1.5rem;
+}
+
+.about .box_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1.2rem;
+    margin-top: 3rem;
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+}
+.about .box_container .box {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    padding: 20px;
+    border-top: 3px solid rgba(1, 31, 87);
+    border-radius: 20px;
+    z-index: 1;
+    background: white;
+    transition: box-shadow .5s;
+}
+
+.about .box_container .box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+.about .box_container .box h2 {
+     color: #333;
+     font-weight: 500;
+}
+.about .box_container .box  p {
+    margin-top: 1rem;
+    color: var(--p-color);
+    font-size: .9rem;
+}
+
+
+
+@media (max-width:992px){
+    .about {
+        padding-inline: 2rem;
+    }
+    .about .box_container {
+        gap: 2rem;
+    }
+    .about .wave {
+        display: none;  
+    }
+}
+
+@media (max-width:600px){
+    .about {
+        padding-inline: 1rem;
+        min-height:90vh ;
+        padding-bottom: 0;
+        padding-top: 110px;
+    }
+    .about .subtitle {
+        font-size: .9rem;
+    }
+}
+
+@media (min-width:1600px){
+    .about {
+        padding-inline: 30rem;
+        min-height: 50vh;
+    }
+    .about .box_container {
+        margin-top: 5rem;
+    }
+    .about .wave {
+        height: 50vh;
+    }
+}
+
+@media (max-width:768px){
+    .about {
+        padding-top: 140px;
+       min-height: 93vh;
+    }
+}

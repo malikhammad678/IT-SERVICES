@@ -1,0 +1,215 @@
+.navbar {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+}
+.navbar .upper_head {
+    padding: 1rem 4rem 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navbar .upper_head h3{
+    font-weight: 450;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(1, 31, 87);
+    color: #fff;
+    font-size: 1rem;
+}
+.navbar .header {
+    padding: .6rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition: .5s;
+}
+.navbar .header.active {
+    position: fixed;
+    transform: translateY(0);
+    width: 100%;
+    background: rgba(1, 31, 87);
+    top: 0;
+    box-shadow:  0 .5rem 1rem rgba(0,0,0,.3);
+    padding: .5rem 4rem;
+}
+.navbar .header.active nav .link {
+    color: #fff;
+    transition: .5s ease;
+    border-bottom: 2px solid transparent;
+}
+.navbar .header.active nav .link:hover{
+   border-bottom: 2px solid #fff;
+   border-top-color: transparent;
+}
+.navbar .header .logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color:#fff;
+    padding: 20px 10px;
+    font-family: var(--funel);
+}
+.navbar .header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+} 
+
+.navbar .header nav .link {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 300;
+    transition: .5s ease;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+.navbar .header nav .link:hover {
+    background: rgba(1, 31, 87);
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.navbar .header nav .link.active {
+    background: rgba(1, 31, 87); 
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.menu {
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+.responsive_nav {
+    display: none;
+}
+
+
+
+@media (max-width:992px){
+    .navbar .upper_head {
+        padding: .5rem 2rem;
+    }
+    .navbar .header {
+        padding: 1.5rem 2rem;
+    }
+    .navbar .header.active {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width:850px){
+    .navbar .upper_head {
+        justify-content: center;
+    }
+    .navbar .header .navbar2 {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    .responsive_nav {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        max-width: 350px;
+        width: 100%;
+        background: #fff;
+        z-index: 1000;
+        background: rgba(1, 31, 87);
+        border-top: 3px solid #fff;
+        min-height: 100%;
+        padding-top: 120px;
+        transform: translateX(100%);
+        transition: .5s;
+    }
+    .responsive_nav.active {
+        transform: translateX(0);
+    }
+    .responsive_nav .link2 {
+        display: block;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        color: #fff;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .responsive_nav .link2.active2 {
+        background: rgb(61, 123, 240);
+    }
+    .cross {
+        position: absolute;
+        top: 3.2rem;
+        right: 2rem;
+        color: rgba(1, 31, 87);
+        width: 40px;
+        height: 40px;
+        background:#fff;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width:600px){
+    .navbar .upper_head {
+        padding: .5rem 1rem;
+    }
+    .navbar .header {
+        padding: .5rem .5rem;
+    }
+    .navbar .header.active {
+        padding: .5rem .5rem;
+    }
+    .navbar .upper_head h3 {
+        font-size: .9rem;
+    }
+    .navbar .header .logo {
+        font-size: 1.8rem;
+    }
+    .menu {
+        font-size: 2.2rem;
+    }
+    .responsive_nav .link2 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .cross {
+        width: 30px;
+        right: 1rem;
+        top: 1.9rem;
+        height: 30px;
+    }
+    .responsive_nav {
+        max-width: 280px;
+        width: 100%;
+    }
+    .navbar .header .logo {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+@media (min-width:1600px){
+    .navbar {
+        padding-inline: 20rem;
+    }
+    .navbar .header {
+        padding-inline: 20rem;
+    }
+    .navbar .header.active {
+        padding-inline: 20rem;
+    }
+    .navbar .header .logo {
+        font-size: 3rem;
+    }
+}

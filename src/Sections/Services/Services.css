@@ -1,0 +1,107 @@
+.services {
+    min-height: 80vh;
+    padding: 130px 4rem 30px 4rem;
+}
+.services h3 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 450;
+    width: fit-content;
+    margin: 0 auto;
+    color: rgba(1, 31, 87);;
+    letter-spacing: 2px;
+    padding-bottom: .5rem;
+    padding-inline: 1rem;
+    border-bottom: 2px solid rgba(1, 31, 87);
+}
+.services .subtitle {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--p-color);
+    padding-top: 1.5rem;
+}
+.services .box_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.services .box_container .box {
+    box-shadow: 0 0 4px rgba(0,0,0,.2);
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid rgba(1, 31, 87);
+    border-radius: 20px;
+    transition: box-shadow .5s;
+}
+.services .box_container .box i {
+    text-align: center;
+    display: block;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    background: rgba(1, 31, 87);
+    color: #fff;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin-bottom: 1.1rem;
+}
+.services .box_container .box h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000;
+    padding-bottom: .5rem;
+}
+.services .box_container .box p {
+    font-size: .9rem;
+    color: var(--p-color);
+}
+.services .box_container .box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+@media (max-width:992px){
+    .services {
+        padding-inline: 2rem;
+    }
+    .services .box_container {
+        gap: 2rem;
+    }
+    
+}
+
+@media (max-width:600px){
+    .services {
+        padding-inline: 1rem;
+        min-height:80vh ;
+        padding-bottom: 0;
+        padding-top: 110px;
+    }
+    .services .subtitle {
+        font-size: .9rem;
+    }
+}
+
+@media (min-width:1600px){
+    .services {
+        padding-inline: 30rem;
+        min-height: 50vh;
+    }
+    .services .box_container {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width:768px){
+    .services {
+        padding-top: 140px;
+       min-height: 93vh;
+    }
+}

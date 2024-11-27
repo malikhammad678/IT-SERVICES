@@ -1,0 +1,257 @@
+.home {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 4rem;
+    z-index: 0;
+    animation: changeImg 20s ease-in-out infinite;
+}
+
+.home .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(5, 25, 63, .6);
+    z-index: 0;
+}
+
+.home .content {
+    position: relative;
+    max-width: 1050px;
+    width: 100%;
+    z-index: 1;
+    padding-top: 120px;
+}
+
+
+.home .content h1 {
+    font-family: var(--funel);
+    font-size: 5rem;
+    line-height: 1;
+    color: #fff;
+    margin-top: -20px;
+    font-weight: 600;
+}
+
+.home .content p {
+    color: #fff;
+    margin-top: 1rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    animation: fromTop .4s ease-in;
+    max-width: 800px;   
+}
+
+.home .flex_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    color: #fff;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    margin-right: 4rem;
+    bottom: 5rem;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.home .flex_container .box {
+    background: rgba(1, 31, 87, .7);
+    padding: 20px;
+    transition: .4s ease;
+
+}
+
+.home .flex_container .box:hover {
+    background: rgb(3, 49, 135);
+}
+
+.home .flex_container .box .content_box {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.home .flex_container .box .content_box .icon {
+    font-size: 2.5rem;
+}
+
+.home .flex_container .box h3 {
+    font-size: 1.5rem;
+    font-weight: 450;
+}
+
+.home .flex_container .box p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.4;
+    padding-top: .5rem;
+}
+
+
+
+
+
+@keyframes fromTop {
+    0% {
+        transform: translateY(-250px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes FromBottom {
+    0% {
+        transform: translateY(250px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes changeImg {
+    0% {
+        background: url("../../assets/hero2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    25% {
+        background: url("../../assets/hero.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    50% {
+        background: url("../../assets/bg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    75% {
+        background: url("../../assets/bg2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    100% {
+        background: url("../../assets/hero2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+@media (max-width:992px){
+    .home {
+        padding-inline:2rem ;
+        min-height: 100vh;
+    }
+    .home .content h3 {
+        font-size: 3rem;
+    }
+    .home .content h1  {
+        font-size: 4rem;
+    }
+    .home .content {
+        max-width:900px;
+        width: 100%;
+}
+}
+
+@media (max-width:1024){
+    .home{
+        min-height: 100vh;
+    }
+}
+
+
+@media (max-width:600px){
+    .home{
+        min-height: 100vh;
+        padding-inline: 1rem;
+    }
+    .home .flex_container .box p {
+        display: none;
+    }
+    .home .flex_container {
+        bottom: 10rem;
+    }
+    .home .content h1 {
+        font-size: 3rem;
+    }
+    .home .content {
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+@media (max-width:468px){
+    /* .home {
+        min-height: 120vh;
+    } */
+    .home .content {
+        max-width:100%;
+        width: 100%;
+    }
+    .home .content h3 {
+        font-size: 2rem;
+    }
+    .home .content h1 {
+        font-size: 3rem;
+        padding-top: .5rem;
+    }
+    .home .flex_container {
+        bottom: 15rem;
+    }
+    .home .flex_container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width:375px){
+    /* .home {
+        min-height: 150vh;
+    } */
+}
+
+@media (min-width:1600px){
+    .home{
+        padding-inline: 20rem ;
+    }
+    .home .content {
+        max-width: 2000px;
+        width: 100%;
+    }
+    .home .content h1 {
+        font-size: 6rem;
+    }
+    .home .content h3 {
+        font-size: 5rem;
+    }
+    .home .content p {
+        font-size: 1.2rem;
+    }
+    .home .flex_container {
+        padding-inline: 20rem;
+        bottom: 15rem;
+    }
+}
